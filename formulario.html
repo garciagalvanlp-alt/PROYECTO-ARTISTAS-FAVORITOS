@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Mi Música y Artistas Favoritos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #00008B;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #d1d5db;
+      border: 4px solid red;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00008B;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 16px;
+      color: red;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .radio-option, .checkbox-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: #FF4500;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color: #cc3700;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #00008B;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cuestionario de Evaluación</h1>
+    <p class="subtitle">Práctica 6: Mi Música, Cantantes y Artistas Favoritos</p>
+
+    <!-- AQUÍ SE CONECTA EL FORMULARIO: Reemplaza la URL en 'action' por la de Formspree o SheetMonkey -->
+    <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+      
+      <!-- 1. Datos del Alumno -->
+      <div class="card">
+        <h2>1. Datos Personales</h2>
+        <div class="form-group">
+          <label for="Nombre">Nombre Completo:</label>
+          <input type="text" id="Nombre" name="Nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="Correo">Correo Electrónico:</label>
+          <input type="email" id="Correo" name="Correo" placeholder="tu@correo.com" required>
+        </div>
+      </div>
+
+      <!-- 2. Preguntas del Cuestionario -->
+      <div class="card">
+        <h2>2. Preguntas de la Práctica</h2>
+        
+        <div class="form-group">
+          <label>¿Cuál de estos cantantes NO aparece en la lista de la práctica?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="Pregunta_1" value="Enrique Iglesias" required> Enrique Iglesias</label>
+            <label class="radio-option"><input type="radio" name="Pregunta_1" value="Shakira"> Shakira</label>
+            <label class="radio-option"><input type="radio" name="Pregunta_1" value="Luis Miguel"> Luis Miguel</label>
+            <label class="radio-option"><input type="radio" name="Pregunta_1" value="Ricky Martin"> Ricky Martin</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Pregunta_2">¿Quién es la cantante nombrada la "Chica Dorada"?</label>
+          <select id="Pregunta_2" name="Pregunta_2" required>
+            <option value="">-- Selecciona una opción --</option>
+            <option value="Shakira">Shakira</option>
+            <option value="Paulina Rubio">Paulina Rubio</option>
+            <option value="Thalia">Thalía</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Comentarios">Comentarios sobre la página:</label>
+          <textarea id="Comentarios" name="Comentarios" rows="3" placeholder="Escribe tus observaciones aquí..."></textarea>
+        </div>
+      </div>
+
+      <!-- Botón para enviar datos -->
+      <button type="submit" class="btn-submit">Enviar Respuestas</button>
+      
+    </form>
+
+    <a href="practica618deseptiembre.html" class="back-link">← Volver a la página principal</a>
+  </div>
+
+</body>
+</html>
